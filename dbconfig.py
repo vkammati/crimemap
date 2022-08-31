@@ -1,5 +1,7 @@
-db_user='root'
-db_password='root'
-host='127.0.0.1',
-port=3306,
-database='crimemap'
+import os
+
+db_user=os.environ.get('MARIADB_USER_ID')
+db_password=os.environ.get('MARIADB_PASSWORD')
+host=os.environ.get('MARIADB_HOST'),
+port=os.environ.get('MARIADB_PORT'),
+database=os.environ.get('MARIADB_DATABASE')
